@@ -2,32 +2,32 @@ Copa-Do-Mundo
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"
+  <meta charset="UTF-8">
   <title>Simulação da Copa do Mundo</title>
-  <style>
+</style>
   body {font-family: Arial, sans-serif; margin: 20px; }
   h1 { color: darkgreen; }
   Button { margin-top: 20px; font-weight: bold; }
   .resultado { margin-top: 20pxw; font-weight: bold; }
  <style>
 </head>
-</body>
+<body>
   <h1> Simulação da Copa do Mundo</h1>
   <p>Probabilidades iniciais (quanto maior, mais chance de vencer):</p> 
 <table id="tabela"> 
-  <tr><th>Seleção</th><th>Probabilidade (%)</th><tr>
-  <tr><td><input type="text" value="Brasil"></td><td><input type="number"
+  <tr><th>Seleção</th><th>Probabilidade (%)</th></tr>
+  <tr><td><input type="text" value="Brasil"></td><td<input type="number"
 value="30"></td></tr>
-  <tr><td>><input type="text" value="Argentina"></td><td>input type="number" 
+  <tr><td>><input type="text" value="Argentina"></td<td><input type="number" 
 value="25"></td></tr>
-  <tr><td>><input type="text" value="França"></td><td>input type="number" 
+  <tr><td>><input type="text" value="França"></td><td<input type="number" 
 value="20"></td></tr>
-  <tr><td>><input type="text" value="Alemanha"></td><td>input type="number" 
+  <tr><td>><input type="text" value="Alemanha"></td><td<input type="number" 
 value="15"></td></tr>
-  <tr><td>><input type="text" value="Portugal"></td><td>input type="number" 
+  <tr><td>><input type="text" value="Portugal"></td><td<input type="number" 
 value="10"></td></tr>
  </table>
-
+{
 
 <button onclik="simular()">Simular Copa</button>
 
@@ -39,10 +39,10 @@ value="10"></td></tr>
   function escolherVencedor(seleção1, prob1, seleção2, prob2)
       const total = prob1 +prob2
       const sorteio = Math.random() *total;
-      retorn sorteio < prob1 ? seleção1 : seleção2;
+      return sorteio < prob1 ? seleção1 : seleção2;
   }
   function simular() { 
-      const tabela = document.getElementByld("tabela");
+      const tabela = document.getElementById("tabela");
       let seleções = [];
 
 
@@ -54,7 +54,7 @@ value="10"></td></tr>
     let fase = seleções;
     let texto= "";
 
-    While (fase.length > 1) {
+    while (fase.length > 1) {
     texto +="<h3>Fase com " + fase.length + " seleções</h3>";
     let nova Fase = [];
     for (let i =0;< fase.length; i += 2) {
@@ -63,7 +63,7 @@ value="10"></td></tr>
 fase[i+1].prob);
             texto += fase[i].nome + " vs " + fase[i+1].nome + " —> <b> + vencedor +"
  "</b><br>";
-             nova Fase.push({nome: vencedor, prob: 50}); // probabilidade ajustada
+             novaFase.push({nome: vencedor, prob: 50}); // probabilidade ajustada
            } else {
              nova Fase.push(fase[i]); // caso de número ímpar
            }
@@ -71,10 +71,10 @@ fase[i+1].prob);
          fase = novaFase;
         }
         texto +="<h2>Campeão:" + fase[0].nome + " ?</h2>";
-        document.getElementByld ("resultado").innerHTML = texto;
+        document.getElementById ("resultado").innerHTML = texto;
        }
       </script>
     </body>
 </html> 
 
-CopadoMundo-fernanda.html
+index.html 
